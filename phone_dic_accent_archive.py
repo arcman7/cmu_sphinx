@@ -67,7 +67,7 @@ with open(os.path.join(dir_name, 'words.dict'), 'w') as f:
             index = sphinx_dic[item]
             row = sphinx_dic_list[index]
             row = row.split(item.lower())
-            print('row: ', row, ' item: ', item.lower())
             f.write(item.lower()+ '\t' + row[1].strip().upper() + '\n')
+    f.write('sil\tSIL\n')
 
 print('finished.')
